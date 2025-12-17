@@ -2,12 +2,12 @@
 
 
 ### 环境
-MySQL Community 8.0.27.1[MySQL :: Download MySQL Installer](https://dev.mysql.com/downloads/installer/)
-Qt 5.14.2[Index of /archive/qt/5.14/5.14.2](https://download.qt.io/archive/qt/5.14/5.14.2/)
-ODBC 9.1.0[MySQL :: Download MySQL Connector/ODBC (Archived Versions)](https://downloads.mysql.com/archives/c-odbc/)
-Qt Creator 4.11.1（在Qt5.14.2\Tools\QtCreator\bin目录下的qtcreator.exe）
-Navicat Premium 16（可在tb购买安装的exe)
-MySQL Workbench 8.0（下载mysql时一并下载）
+- MySQL Community 8.0.27.1[MySQL :: Download MySQL Installer](https://dev.mysql.com/downloads/installer/)
+- Qt 5.14.2[Index of /archive/qt/5.14/5.14.2](https://download.qt.io/archive/qt/5.14/5.14.2/)
+- ODBC 9.1.0[MySQL :: Download MySQL Connector/ODBC (Archived Versions)](https://downloads.mysql.com/archives/c-odbc/)
+- Qt Creator 4.11.1（在Qt5.14.2\Tools\QtCreator\bin目录下的qtcreator.exe）
+- Navicat Premium 16（可在tb购买安装的exe)
+- MySQL Workbench 8.0（下载mysql时一并下载）
 
 
 
