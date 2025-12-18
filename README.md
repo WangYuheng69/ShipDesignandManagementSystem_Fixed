@@ -42,7 +42,7 @@ ShipDesignAndManagementSystem 是一个基于 **Qt 桌面应用程序** 与 **My
 
 - **操作系统**：Windows 11（Windows 7 及以上理论可运行）
 
-- **Qt**：Qt 5.14.2
+- **Qt**：[Qt 5.14.2](https://download.qt.io/archive/qt/5.14/5.14.2/)
 
 - **Qt Creator**：4.11.1
 
@@ -50,7 +50,7 @@ ShipDesignAndManagementSystem 是一个基于 **Qt 桌面应用程序** 与 **My
 
 - **开发语言**：C++（C++17 标准）、XML（1.0）
 
-- **数据库**：MySQL Community Server 8.0.27.1
+- **数据库**：[MySQL Community Server 8.0.27.1](https://dev.mysql.com/downloads/installer/)
 
 - **数据库管理工具**：
 
@@ -58,7 +58,7 @@ ShipDesignAndManagementSystem 是一个基于 **Qt 桌面应用程序** 与 **My
 
     - MySQL Workbench 8.0
 
-- **数据库驱动**：MySQL Connector/ODBC 9.1.0（64 位）
+- **数据库驱动**：[MySQL Connector/ODBC 9.1.0 （64 位）](https://downloads.mysql.com/archives/c-odbc/)
 
 
 ⚠️ **注意**：
