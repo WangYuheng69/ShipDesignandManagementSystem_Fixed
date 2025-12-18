@@ -29,6 +29,7 @@ FORMS += \
     ui/managerpage.ui \
     ui/approverpage.ui
 
+# ui_*.h 文件直接生成到 src 文件夹中
 UI_DIR = src
 
 # Default rules for deployment.

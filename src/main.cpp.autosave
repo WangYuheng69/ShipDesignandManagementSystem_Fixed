@@ -1,0 +1,28 @@
+#include "src/mainwindow.h"
+#include "src/database.h"
+#include <QApplication>
+#include "src/managerpage.h"
+#include "src/designerpage.h"
+#include "src/approverpage.h"
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+
+    database::getConnnection();
+    //database::quitConnection();
+
+    MainWindow w;
+    //managerpage w;
+    // designerpage  w;
+    //approverpage w;
+    w.show();
+    
+    
+    int result = a.exec();
+
+    database::quitConnection(); // 程序退出时关闭数据库连接
+
+    return result;
+
+}
