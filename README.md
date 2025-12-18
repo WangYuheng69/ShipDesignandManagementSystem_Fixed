@@ -54,7 +54,7 @@ ShipDesignAndManagementSystem 是一个基于 **Qt 桌面应用程序** 与 **My
 
 - **数据库管理工具**：
 
-    - Navicat Premium 16
+    - Navicat Premium 16（推荐）
 
     - MySQL Workbench 8.0
 
@@ -77,8 +77,40 @@ CREATE DATABASE shipmanagement;
 
 后续所有数据表均创建在该 Schema 下。
 
+### 2.数据表结构与 SQL 文件导入说明
 
-### 2. 数据表结构
+为保证数据库结构的一致性和可复现性，本项目已将完整的数据表结构及示例数据统一导出为 SQL 脚本文件，并随项目一同提供。
+推荐通过导入 SQL 文件的方式完成数据库初始化，而非手动逐表创建。
+
+#### 2.1 SQL 文件说明
+
+项目中已包含数据库初始化脚本文件，位于/sql/shipmanagement.sql
+
+该 SQL 文件中包含以下内容：
+
+- 数据库（Schema）创建语句；
+- designer、designfile、project、manager、approver、approvefile 六个数据表的建表语句；
+- 系统测试所需的示例数据插入语句。
+
+通过执行该 SQL 文件，可一次性完成数据库结构创建与示例数据初始化。
+
+#### 2.2 使用 Navicat 导入 SQL 文件
+
+可使用 Navicat Premium 导入项目提供的 SQL 文件，步骤如下：
+
+1. 打开 **Navicat Premium** 并连接本地 MySQL 服务；
+2. 创建或选择数据库 Schema（如 `shipmanagement`）；
+3. 右键点击该数据库，选择 **“运行 SQL 文件”**；
+4. 选择项目中的 `shipmanagement.sql` 文件并执行；
+5. 执行完成后，确认相关数据表及示例数据已成功创建。
+
+具体操作流程可参考以下文章：
+[Navicat 如何导入和导出 SQL 文件（CSDN 博客）](https://blog.csdn.net/qq_42257666/article/details/117258964)
+
+> 若已成功导入 SQL 文件，则无需再手动创建各数据表。
+
+
+### 3.手动创建各数据表
 
 系统共使用 **6 个数据表**：
 
@@ -198,6 +230,7 @@ CREATE DATABASE shipmanagement;
 |---|---|---|---|---|---|
 |r001|f001|fn001|delete|2025.1.1|202503001|
 
+
 ## ODBC 数据源配置（关键步骤）
 
 ### ODBC DSN 设置（64 位）
@@ -224,6 +257,7 @@ CREATE DATABASE shipmanagement;
 - `Data Source Name` 必须为 **ShipDesignandManagement**，
     该名称与项目中 `database.cpp` 文件中的配置严格对应，不可随意修改。
 - `Database` 是 MySQL 中创建的 Schema 名称，与 DSN 名称可以不同。
+
 
 
 ## 系统登录说明（测试账号）
