@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QWidget>
 #include <QString>
-#include <database.h>
+#include "src/database.h"
 #include <QStandardItemModel>
 
 

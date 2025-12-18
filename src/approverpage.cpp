@@ -1,6 +1,6 @@
-#include "approverpage.h"
-#include "ui_approverpage.h"
-#include "mainwindow.h"
+#include "src/approverpage.h"
+#include "src/ui_approverpage.h"
+#include "src/mainwindow.h"
 
 approverpage::approverpage(QWidget *parent)
     : QMainWindow(parent)

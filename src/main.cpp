@@ -1,9 +1,9 @@
-#include "mainwindow.h"
-#include "database.h"
+#include "src/mainwindow.h"
+#include "src/database.h"
 #include <QApplication>
-#include "managerpage.h"
-#include "designerpage.h"
-#include "approverpage.h"
+#include "src/managerpage.h"
+#include "src/designerpage.h"
+#include "src/approverpage.h"
 
 int main(int argc, char *argv[])
 {

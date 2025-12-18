@@ -1,4 +1,4 @@
-#include "database.h"
+#include "src/database.h"
 
 QSqlDatabase database :: db = QSqlDatabase :: addDatabase("QODBC");
 QSqlQuery * database :: sql = NULL;

@@ -1,6 +1,6 @@
-#include "managerpage.h"
-#include "ui_managerpage.h"
-#include "mainwindow.h"
+#include "src/managerpage.h"
+#include "src/ui_managerpage.h"
+#include "src/mainwindow.h"
 
 
 managerpage::managerpage(QWidget *parent)

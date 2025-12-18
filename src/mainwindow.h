@@ -7,10 +7,10 @@
 #include <QMainWindow>
 #include <QSqlQuery>
 #include <QSqlError>
-#include "database.h"
-#include "managerpage.h"
-#include "designerpage.h"
-#include "approverpage.h"
+#include "src/database.h"
+#include "src/managerpage.h"
+#include "src/designerpage.h"
+#include "src/approverpage.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {                         //ui指针

@@ -1,6 +1,6 @@
-#include "designerpage.h"
-#include "ui_designerpage.h"
-#include "mainwindow.h"
+#include "src/designerpage.h"
+#include "src/ui_designerpage.h"
+#include "src/mainwindow.h"
 
 designerpage::designerpage(QWidget *parent)
     : QMainWindow(parent)
