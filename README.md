@@ -8,7 +8,6 @@ ShipDesignAndManagementSystem 是一个基于 **Qt 桌面应用程序** 与 **My
 
 本项目为软件综合实践课程设计项目，系统采用 C++17 语言开发，使用 Qt 进行图形界面构建，并通过 ODBC 接口实现与 MySQL 数据库的交互。
 
----
 
 ## 系统功能概述
 
@@ -36,7 +35,6 @@ ShipDesignAndManagementSystem 是一个基于 **Qt 桌面应用程序** 与 **My
 4. 审批者功能界面
 
 
----
 
 ## 开发与运行环境
 
@@ -66,7 +64,6 @@ ShipDesignAndManagementSystem 是一个基于 **Qt 桌面应用程序** 与 **My
 ⚠️ **注意**：
 由于 Qt 项目构建为 64 位（`Desktop_Qt_5_14_2_MSVC2017_64bit`），必须使用 **64 位 ODBC 驱动**，否则无法正常连接数据库。
 
----
 
 ## 数据库配置说明
 
@@ -80,7 +77,6 @@ CREATE DATABASE shipmanagement;
 
 后续所有数据表均创建在该 Schema 下。
 
----
 
 ### 2. 数据表结构
 
@@ -116,7 +112,6 @@ CREATE DATABASE shipmanagement;
 |---|---|---|---|---|---|
 |202501001|12301001|d001|male|186001|[d001@gmail.com](mailto:d001@gmail.com)|
 
----
 
 #### 2.2 designfile 表（设计文件）
 
@@ -130,7 +125,11 @@ CREATE DATABASE shipmanagement;
 |designerid|设计师编号|
 |projectid|项目编号|
 
----
+示例数据：
+
+|fileid|filename|filetype|uploaddate|versionnumber|designerid|projectid|
+|---|---|---|---|---|---|---|
+|f001|fn001|CSV|2025.1.1|1.1|202501001|p001|
 
 #### 2.3 project 表（项目）
 
@@ -142,7 +141,11 @@ CREATE DATABASE shipmanagement;
 |enddate|结束日期|
 |status|项目状态|
 
----
+示例数据：
+
+|projectid|projectname|startdate|enddate|status|
+|---|---|---|---|---|
+|p001|n001|2025.9.1|2025.9.2|done|
 
 #### 2.4 manager 表（项目经理）
 
@@ -155,7 +158,11 @@ CREATE DATABASE shipmanagement;
 |phone|电话|
 |email|邮箱|
 
----
+示例数据：
+
+|managerid|password|name|gender|phone|email|
+|---|---|---|---|---|---|
+|202502001|12302001|m001|male|188001|[m001@gmail.com](mailto:m001@gmail.com)|
 
 #### 2.5 approver 表（审批者）
 
@@ -168,7 +175,11 @@ CREATE DATABASE shipmanagement;
 |phone|电话|
 |email|邮箱|
 
----
+示例数据：
+
+|approverid|password|name|gender|phone|email|
+|---|---|---|---|---|---|
+|202503001|12303001|a001|female|198001|[a001@gmail.com](mailto:a001@gmail.com)|
 
 #### 2.6 approvefile 表（审批记录）
 
@@ -181,7 +192,11 @@ CREATE DATABASE shipmanagement;
 |changedate|变更日期|
 |approverid|审批者编号|
 
----
+示例数据：
+
+|recordid|fileid|filename|changewhy|changedate|approverid|
+|---|---|---|---|---|---|
+|r001|f001|fn001|delete|2025.1.1|202503001|
 
 ## ODBC 数据源配置（关键步骤）
 
@@ -210,7 +225,6 @@ CREATE DATABASE shipmanagement;
     该名称与项目中 `database.cpp` 文件中的配置严格对应，不可随意修改。
 - `Database` 是 MySQL 中创建的 Schema 名称，与 DSN 名称可以不同。
 
----
 
 ## 系统登录说明（测试账号）
 系统采用基于角色的登录方式，请在登录界面选择对应角色后输入账号和密码。
@@ -227,13 +241,21 @@ CREATE DATABASE shipmanagement;
 - 账号：approver 表中的 approverid
 - 密码：approver 表中的 password
 
-示例账号（设计师）：
+示例账号：
 ```
+（设计师）
 账号：202501001
 密码：12301001
+
+（项目经理）
+账号：202502001
+密码：12302001
+
+（审批者）
+账号：202503001
+密码：12303001
 ```
 
----
 
 ## 说明
 本项目为软件综合实践课程设计项目，主要用于软件工程相关课程的学习与实践。当前版本重点实现了基于 Qt 桌面应用的多角色数据管理与协作功能，涵盖设计文件管理、项目管理以及审批记录管理等基础模块。
@@ -242,7 +264,6 @@ CREATE DATABASE shipmanagement;
 
 本项目更侧重于对软件工程开发流程的实践，包括需求分析、数据库建模、系统实现与测试等环节，适合作为课程设计或 Qt 桌面应用开发的学习参考。
 
----
 ## 致谢
 本项目在开发初期参考了 Bilibili 上的 Qt 教学视频
 **《超市会员管理系统第一节之文档构思及 QT 环境配置》**
@@ -251,7 +272,6 @@ CREATE DATABASE shipmanagement;
 在此基础上，本项目对系统功能、数据库结构、界面设计以及角色划分等内容均进行了重新设计与实现，最终形成了面向船舶设计流程的独立管理系统。
 在此对原视频作者的分享表示感谢，也希望该视频能为初学 Qt 的同学提供有价值的学习指引。
 
----
 ## 开源协议
 本项目采用 **MIT License** 开源协议。
 MIT License 允许任何人自由使用、复制、修改、合并、发布、分发本软件及其副本，前提是在软件及其所有副本中包含原始版权声明和许可声明。
