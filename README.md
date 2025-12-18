@@ -265,8 +265,8 @@ CREATE DATABASE shipmanagement;
 本项目更侧重于对软件工程开发流程的实践，包括需求分析、数据库建模、系统实现与测试等环节，适合作为课程设计或 Qt 桌面应用开发的学习参考。
 
 ## 致谢
-本项目在开发初期参考了 Bilibili 上的 Qt 教学视频
-**《超市会员管理系统第一节之文档构思及 QT 环境配置》**
+本项目在开发初期参考了 Bilibili 上的[我的朋友约塞克](https://space.bilibili.com/646100493/?spm_id_from=333.788.upinfo.detail.click)发布的Qt 教学视频
+[**《超市会员管理系统第一节之文档构思及 QT 环境配置》**](https://www.bilibili.com/video/BV1C5411d71m/?spm_id_from=333.337.search-card.all.click)
 作为 Qt 环境搭建和项目结构规划的入门学习资料。
 
 在此基础上，本项目对系统功能、数据库结构、界面设计以及角色划分等内容均进行了重新设计与实现，最终形成了面向船舶设计流程的独立管理系统。
